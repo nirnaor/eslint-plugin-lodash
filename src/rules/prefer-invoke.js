@@ -55,9 +55,6 @@ module.exports = {
         }
 
         const handleLogicalExpression = (node, consequentBody, suspectedCallee) => {
-            if (!_.isEqual(_.get(node, 'parent.right'), node)) {
-                return
-            }
             if (!_.isEqual(_.get(node, 'parent.operator'), '&&')) {
                 return
             }

@@ -19,6 +19,7 @@ ruleTester.run('prefer-invoke', rule, {
     valid: [
         {code: 'if (shouldRender || _.isFunction(x)) { x()}'},
         {code: 'if (something)  _.isFunction(x)'},
+        {code: 'if (_.isFunction(a, b))  a()'},
         {code: 'if (shouldNotify && _.isFunction(f)) {g()}'},
         {code: 'if(shouldRender){_.invoke(obj, "render");}'},
         {code: 'if (_.otherFunc(obj.foo)) {obj.foo(a, b, c)}'},
